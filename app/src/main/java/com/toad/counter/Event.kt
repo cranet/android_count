@@ -2,6 +2,7 @@ package com.toad.counter
 
 import android.content.Context
 import android.view.animation.Animation
+import java.util.*
 
 class Event(private val context: Context) {
 
@@ -12,8 +13,10 @@ class Event(private val context: Context) {
 
     fun isEvent(count: Int): Boolean {
         if (count % getEventIncrement(count) == 0) {
-//            text = context.resources.getStringArray(R.array.event_strings))
-            text = context.getString(R.string.app_name)
+
+            val array = context.resources.getStringArray(R.array.event_strings)
+            text = array[random(array.size)].toString()
+//            text = context.getString(R.string.app_name)
             return true
         }
         return false
@@ -28,5 +31,10 @@ class Event(private val context: Context) {
             else -> 10
         }
 
+    }
+
+    private fun random(to: Int): Int {
+        val random = Random()
+        return random.nextInt(to - 0)
     }
 }

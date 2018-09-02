@@ -25,25 +25,27 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!--Word-->
         <TextView
+            android:id="@+id/textView_word"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:text="@{viewModel.eventText}"
             android:textSize="48dp"
             android:visibility="@{viewModel.eventVisibility}"
-            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintBottom_toTopOf="@+id/textView_count"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1"
-            android:text="@{viewModel.eventText}"
             tools:text="nice" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textView_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -56,6 +58,25 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="9999" />
+
+        <!--Animation Text View-->
+        <TextView
+            android:id="@+id/textView_count_anim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@{viewModel.currentCount}"
+            android:textColor="@color/grey"
+            android:textSize="96dp"
+            android:visibility="@{viewModel.eventVisibility}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="9999"
+            tools:visibility="gone" />
+
 
         <Button
             android:layout_width="0dp"
@@ -74,7 +95,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView_count"
             app:layout_constraintVertical_bias=".9" />
 
     </android.support.constraint.ConstraintLayout>
