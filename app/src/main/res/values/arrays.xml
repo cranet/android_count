@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="event_strings">
+
+        <!--General-->
+        <item>"cool"</item>
+        <item>"nice"</item>
+        <item>"awesome"</item>
+        <item>"super"</item>
+        <item>"fantastic"</item>
+        <item>"unbelievable"</item>
+        <item>"frosty</item>
+        <item>"astonishing"</item>
+        <item>"magnificent"</item>
+        <item>"mind blowing"</item>
+        <item>"never ending"</item>
+        <item>"untouchable"</item>
+        <item>"invincible"</item>
+        <item>"invisible"</item>
+        <item>"inconceivable"</item>
+        <item>"shazam"</item>
+
+        <!--Smash-->
+        <item>"pika pikaa"</item>
+        <item>"falcon punch"</item>
+        <item>"waaaaah"</item>
+        <item>"metal gear?!"</item>
+        <item>"come on"</item>
+        <item>"big boss"</item>
+        <item>"show me your moves"</item>
+
+
+        <!--DDR-->
+        <item>"ok"</item>
+        <item>"good"</item>
+        <item>"great"</item>
+        <item>"perfect"</item>
+        <item>"marvelous</item>
+
+        <!--Unreal Tournament-->
+        <item>"double kill"</item>
+        <item>"multi kill"</item>
+        <item>"mega kill"</item>
+        <item>"ultra kill"</item>
+        <item>"monster kill"</item>
+        <item>"unreal"</item>
+        <item>"untouchable"</item>
+        <item>"smackdown"</item>
+
+    </array>
+
+    <array name="event_phrases">
+        <item>"you're doing great"</item>
+        <item>"keep on going"</item>
+        <item>"you're amazing"</item>
+        <item>"you got this"</item>
+        <item>"it takes guts to wear that"</item>
+        <item>"nobody has gotten this far"</item>
+        <item>"you've got moves"</item>
+        <item>"you've got style"</item>
+        <item>"cool"</item>
+        <item>"you're the best"</item>
+        <item>"a weapon to surpass metal gear"</item>
+        <item>"unreal tournament 2003"</item>
+    </array>
+
+</resources>

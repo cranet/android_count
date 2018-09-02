@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<translate xmlns:android="http://schemas.android.com/apk/res/android"
-    android:interpolator="@android:anim/decelerate_interpolator"
-    android:fromYDelta="0%p" android:toYDelta="-15%p"
-    android:duration="200"/>
+
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/decelerate_interpolator">
+
+
+    <!--<translate-->
+        <!--android:duration="200"-->
+        <!--android:fromYDelta="0%p"-->
+        <!--android:toYDelta="-15%p" />-->
+
+    <rotate
+        android:duration="600"
+        android:fromDegrees="0"
+        android:toDegrees="360"/>
+
+    <!--<translate-->
+        <!--android:duration="200"-->
+        <!--android:fromYDelta="-15%p"-->
+        <!--android:toYDelta="0%p"-->
+
+        <!--/>-->
+
+</set>
