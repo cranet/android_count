@@ -2,6 +2,7 @@ package com.toad.counter
 
 import android.content.Context
 import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import java.util.*
 
 class Event(private val context: Context) {
@@ -16,6 +17,7 @@ class Event(private val context: Context) {
 
             val array = context.resources.getStringArray(R.array.event_strings)
             text = array[random(array.size)].toString()
+            animation = AnimationUtils.loadAnimation(context, R.anim.bounce)
 //            text = context.getString(R.string.app_name)
             return true
         }

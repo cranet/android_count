@@ -10,7 +10,6 @@
         <!--android:toYDelta="-15%p" />-->
 
     <rotate
-        android:duration="600"
         android:fromDegrees="0"
         android:toDegrees="360"/>
 

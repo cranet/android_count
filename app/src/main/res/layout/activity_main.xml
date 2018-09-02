@@ -36,6 +36,7 @@
             android:layout_marginTop="8dp"
             android:text="@{viewModel.eventText}"
             android:textSize="48dp"
+            android:onAnimationEnd=""
             android:visibility="@{viewModel.eventVisibility}"
             app:layout_constraintBottom_toTopOf="@+id/textView_count"
             app:layout_constraintEnd_toEndOf="parent"
@@ -59,7 +60,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="9999" />
 
-        <!--Animation Text View-->
+        <!--Animation Count View-->
         <TextView
             android:id="@+id/textView_count_anim"
             android:layout_width="wrap_content"

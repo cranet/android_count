@@ -3,8 +3,10 @@ package com.toad.counter
 import android.content.Context
 import android.databinding.BaseObservable
 import android.databinding.Bindable
+import android.support.annotation.AnimRes
 import android.util.Log
 import android.view.View
+import android.view.animation.Animation
 
 class MainViewModel(context: Context, private val callback: CountCallback) : BaseObservable() {
 
@@ -16,6 +18,9 @@ class MainViewModel(context: Context, private val callback: CountCallback) : Bas
         count++
         Log.d("log", "onClickCount")
         isEvent = eventCheck(count)
+        if (isEvent) {
+            callback.onEvent()
+        }
         notifyChange()
 //        callback.onCount(count)
     }
