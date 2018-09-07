@@ -8,7 +8,6 @@ import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import com.toad.counter.databinding.ActivityMainBinding
-import java.time.Duration
 
 class MainActivity : AppCompatActivity(), CountCallback {
 
@@ -29,27 +28,28 @@ class MainActivity : AppCompatActivity(), CountCallback {
         Log.d("log", "event")
         val countAnim: Animation = AnimationUtils.loadAnimation(this, R.anim.bounce)
         countAnim.duration = animDuration
-        mBinding.textViewCountAnim.startAnimation(countAnim)
-
-        val textAnim: Animation = AnimationUtils.loadAnimation(this, R.anim.up_fade)
-        textAnim.duration = animDuration
 
         countAnim.setAnimationListener(object : Animation.AnimationListener {
             override fun onAnimationRepeat(animation: Animation?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
 
             override fun onAnimationStart(animation: Animation?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
 
             override fun onAnimationEnd(animation: Animation?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-                mBinding.textViewWord.visibility = View.GONE
+                //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                mBinding.textViewCountAnim.visibility = View.GONE
             }
 
         })
 
+        val textAnim: Animation = AnimationUtils.loadAnimation(this, R.anim.up_fade)
+        textAnim.duration = animDuration
+
+        //Start anim
+        mBinding.textViewCountAnim.startAnimation(countAnim)
         mBinding.textViewWord.startAnimation(textAnim)
 
     }

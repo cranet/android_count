@@ -26,6 +26,8 @@ class Event(private val context: Context) {
 
     private fun getEventIncrement(count: Int): Int {
         return when (count) {
+            //Debub
+            in 1..10 -> 2
 
             in 1..100 -> 10
             in 100..505 -> 15

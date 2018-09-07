@@ -25,7 +25,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!--Word-->
+        <!--Event Word-->
         <TextView
             android:id="@+id/textView_word"
             android:layout_width="wrap_content"
@@ -36,7 +36,6 @@
             android:layout_marginTop="8dp"
             android:text="@{viewModel.eventText}"
             android:textSize="48dp"
-            android:onAnimationEnd=""
             android:visibility="@{viewModel.eventVisibility}"
             app:layout_constraintBottom_toTopOf="@+id/textView_count"
             app:layout_constraintEnd_toEndOf="parent"
@@ -44,6 +43,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1"
             tools:text="nice" />
+        <!--android:onAnimationEnd=""-->
+
 
         <TextView
             android:id="@+id/textView_count"
@@ -60,14 +61,14 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="9999" />
 
-        <!--Animation Count View-->
+        <!--Event Count View-->
         <TextView
             android:id="@+id/textView_count_anim"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
-            android:text="@{viewModel.currentCount}"
+            android:text="@{viewModel.animCount}"
             android:textColor="@color/grey"
             android:textSize="96dp"
             android:visibility="@{viewModel.eventVisibility}"

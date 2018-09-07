@@ -12,8 +12,9 @@ class CountChecker {
 
     private fun getEventIncrement(count: Int): Int {
         return when (count) {
-
-            in 1..100 -> 10
+            //Debug
+            in 1..10 -> 1
+            //in 1..100 -> 10
             in 100..505 -> 15
             in 505..1000 -> 25
             else -> 10

@@ -11,6 +11,7 @@ import android.view.animation.Animation
 class MainViewModel(context: Context, private val callback: CountCallback) : BaseObservable() {
 
     private var count: Int = 0
+    private var countAnim: String = "0"
     private var isEvent: Boolean = false
     private val event: Event = Event(context)
 
@@ -19,7 +20,9 @@ class MainViewModel(context: Context, private val callback: CountCallback) : Bas
         Log.d("log", "onClickCount")
         isEvent = eventCheck(count)
         if (isEvent) {
+            countAnim = count.toString()
             callback.onEvent()
+
         }
         notifyChange()
 //        callback.onCount(count)
@@ -32,6 +35,11 @@ class MainViewModel(context: Context, private val callback: CountCallback) : Bas
     @Bindable
     fun getCurrentCount(): String {
         return count.toString()
+    }
+
+    @Bindable
+    fun getAnimCount(): String {
+        return countAnim
     }
 
     fun onClickReset() {
@@ -54,6 +62,7 @@ class MainViewModel(context: Context, private val callback: CountCallback) : Bas
             event.text
         } else ""
     }
+
 
 //    @Bindable
 //    fun getAnimation(): Int {
